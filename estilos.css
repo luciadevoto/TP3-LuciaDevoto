@@ -142,7 +142,7 @@ footer {
   animation: moverFondo 6s linear infinite;
 }
 
-/* Keyframes de animación */
+/* animación */
 @keyframes moverFondo {
   0% {
     left: 0;
