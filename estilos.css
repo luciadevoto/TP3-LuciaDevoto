@@ -13,13 +13,26 @@ body {
   background-color: #595d3b;
   color: #fffde6;
   line-height: 1.6;
+  width: 100%;
+}
+
+/*fondo portfolio*/
+.titulo-index {
+  background-image: url('img/fondo-index.svg');
+  background-size: cover;
+  background-repeat:repeat;
+  background-position: center;
+  padding: 200px 0 100px;
+  overflow: hidden;
+  position: relative;
+  animation: moverFondo 6s linear infinite;
 }
 
 /* Tipografías */
 h1 {
   font-family: 'Marcellus', serif;
   font-size: 200px;
-  color: #fffde6;
+  color: #E3E1A4;
   text-align: center;
   margin-top: 100px;
   letter-spacing: 2px;
@@ -28,7 +41,7 @@ h1 {
 p {
   font-size: 20px;
   text-align: center;
-  color: #595d3b;
+  color: #E3E1A4;
 }
 
 /* HEADER */
@@ -43,6 +56,7 @@ header {
   align-items: center;
   border-bottom: 1px solid #E3E1A4;
 }
+
 
 .botonera {
   display: flex;
@@ -68,7 +82,6 @@ header {
   padding: 6px 12px;
   border: 1px solid #E3E1A4;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
 }
 
 .botones a:hover {
@@ -93,6 +106,8 @@ header {
   width: 100%;
   height: auto;
   display: block;
+  position: absolute;
+  margin-top: 5px;
 }
 
 .decoracion-index {
@@ -108,39 +123,31 @@ header {
   height: auto;
 }
 
-/* BOTÓN DE SCROLL */
+
 .boton {
   margin-top: 40px;
   text-align: center;
   font-size: 20px;
   color: #E3E1A4;
-  cursor: pointer;
 }
 
-.boton p:last-child {
-  font-size: 20px;
-  margin-top: 5px;
-}
 
 /* FOOTER */
 footer {
   background-color: #E3E1A4;
-  color: #595d3b;
   text-align: center;
   padding: 15px 0;
   font-size: 10px;
   margin-top: 80px;
+  width: 100%;
 }
 
-.fondo-index {
-  overflow: hidden;
-  position: relative;
+footer p {
+  font-size: 20px;
+  text-align: center;
+  color: #595d3b;
 }
 
-.fondo-index img {
-  position: relative;
-  animation: moverFondo 6s linear infinite;
-}
 
 /* animación */
 @keyframes moverFondo {
