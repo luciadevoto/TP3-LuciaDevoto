@@ -1,2 +1,156 @@
 @charset "utf-8";
 /*CSS Document*/
+
+/*index.html*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #595d3b;
+  color: #fffde6;
+  line-height: 1.6;
+}
+
+/* Tipografías */
+h1 {
+  font-family: 'Marcellus', serif;
+  font-size: 200px;
+  color: #fffde6;
+  text-align: center;
+  margin-top: 100px;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+  color: #595d3b;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #595d3b;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E3E1A4;
+}
+
+.botonera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.botonera img {
+  height: 65px;
+}
+
+.botones ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.botones a {
+  color: #E3E1A4;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 6px 12px;
+  border: 1px solid #E3E1A4;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.botones a:hover {
+  background-color: #E3E1A4;
+  color: #595d3b;
+}
+
+/* SECCIÓN PRINCIPAL */
+.titulo-index p {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+/* FONDO DECORATIVO */
+.imagenes-index {
+  position: relative;
+  margin-top: 60px;
+}
+
+.fondo-index img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.decoracion-index {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.decoracion-index img {
+  width: 166px;
+  height: auto;
+}
+
+/* BOTÓN DE SCROLL */
+.boton {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #E3E1A4;
+  cursor: pointer;
+}
+
+.boton p:last-child {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #E3E1A4;
+  color: #595d3b;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 10px;
+  margin-top: 80px;
+}
+
+.fondo-index {
+  overflow: hidden;
+  position: relative;
+}
+
+.fondo-index img {
+  position: relative;
+  animation: moverFondo 6s linear infinite;
+}
+
+/* Keyframes de animación */
+@keyframes moverFondo {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -50px; 
+  }
+  100% {
+    left: 0;
+  }
+}
