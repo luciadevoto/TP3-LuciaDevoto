@@ -1,140 +1,169 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="utf-8"/>
-    <title>Lucia Devoto - Portfolio</title>
-    <link href="estilos.css" rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/x-icon" href="img/logo-verde.svg">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <meta name="description" content="presentacion de mi portfolio">
+        <meta name="autor" content="Lucia Devoto">
+        <title>Lucia Devoto - Portfolio</title>
+        <link href="estilos.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="img/logo-verde.svg">
     
-    <!-- tipografia fraunces -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+        <!-- tipografia fraunces -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
 
-    <!-- tipografia poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+        <!-- tipografia poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
 
     <body>
+        
         <header>
             <nav class="botonera">
-                <div>
-                    <img src="img/logo.png" width="126px" height="65px" alt="logo">
+                
+                <div class="logo">
+                    <img src="img/logo-amarillo.svg" width="126px" height="65px" alt="logo">
                 </div>
+                
                 <div class="botones">
                     <ul>
-                        <li>
-                            <a href="sobre-mi.html">Sobre mi</a>
-                        </li>
-                        <li>
-                            <a href="portfolio">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="contacto">Contacto</a>
-                        </li>
+                        <li><a href="sobre-mi.html">Sobre mi</a></li>
+                        <li><a href="portfolio">Portfolio</a></li>
+                        <li><a href="contacto">Contacto</a></li>
                     </ul>
                 </div>
+            
             </nav>
         </header>
 
         <main>
+            
             <section class="titulo">
                 <h1>Portfolio</h1>
                 <h3>compilado de mis trabajos</h3>
             </section>
 
             <section class="proyectos">
+                
                 <article class="diseño">
                     <p>La imprenta</p>
                     <img src="img/la-imprenta.png" width="482px" height="307px" alt="miniatura del proyecto la imprenta">
-                    <a href="popup-imprenta" class="boton">Identidad visual</a>
+                    <a href="popup-laimprenta.html" class="boton">Identidad visual</a>
                 </article>
             
                 <article class="diseño">
                     <p>Mali skincare</p>
                     <img src="img/mali.png" width="482px" height="307px" alt="miniatura del proyecto mali skincare">
-                    <a href="popup-mali" class="boton">Identidad visual</a>
+                    <a href="popup-maliskincare.html" class="boton">Identidad visual</a>
                 </article>
 
                 <article class="diseño">
                     <p>Humificador</p>
                     <img src="img/humificador.png" width="482px" height="307px" alt="miniatura del proyecto humificador">
-                    <a href="popup-humificador" class="boton">Fotografía</a>
+                    <a href="popup-humificador.html" class="boton">Fotografía</a>
                 </article>
 
                 <article class="diseño">
                     <p>Buenos Aires</p>
                     <img src="img/buenos-aires.png" width="482px" height="307px" alt="miniatura del proyecto buenos aires">
-                    <a href="popup-buenosaires" class="boton">Fotografía</a>
+                    <a href="popup-buenosaires.html" class="boton">Fotografía</a>
                 </article>
+            
             </section>
 
             <section class="popup">
+                
                 <article class="lightbox" id="popup-imprenta">
+                    
                     <div class="popup-contenido">
                         <div class="texto-popup">
                             <p class="categoria"> portfolio - identidad visual</p>
                             <h2>La imprenta</h2>
                             <p>La imprenta es el resultado de una búsqueda profunda por una identidad visual sobre una obra de teatro que se realiza en el Teatro Cervantes. Busqué una identidad relacionada con la obra, eligiendo estilos de presentaciones mas “rusticas”.</p>
                         </div>
+                        
                         <div class="imagenes-popup">
                             <img src="img/popup-laimprenta.png" width="572px" height="590px" alt="popup de proyecto la imprenta">
                         </div>
+                        
                         <div>
                             <a href="#popup-imprenta" class="cerrar">X</a>
                         </div>
                     </div>
+
                 </article>
 
                 <article class="lightbox" id="popup-mali">
+                    
                     <div class="popup-contenido">
                         <div class="texto-popup">
                             <p class="categoria"> portfolio - identidad visual</p>
                             <h2>Mali skincare</h2>
                             <p>Mali Skincare es el resultado de una búsqueda profunda por una identidad visual que conecte con el cuidado y la armonía interior. Aposté por una estética limpia y moderna, con una paleta suave y formas geométricas que evocan equilibrio.</p>
                         </div>
+                        
                         <div class="imagenes-popup">
                             <img src="img/popup-maliskincare.png" width="526px" height="476px" alt="popup de proyecto mali skincare">
                         </div>
+                        
                         <div>
                             <a href="#popup-mali" class="cerrar">X</a>
                         </div>
                     </div>
+                
                 </article>
             
                 <article class="lightbox" id="popup-humificador">
+                    
                     <div class="popup-contenido">
                         <div class="texto-popup">
                             <p class="categoria"> portfolio - fotografía</p>
                             <h2>Humificador</h2>
                             <p>Realicé una sesión de fotos para la venta del humificador. La sesión incluye una foto del producto para mostrar el mismo, una foto del producto como decoración y una foto del producto en uso. Esto puede variar dependiendo el producto y la sesión de fotos que se desee realizar.</p>
                         </div>
+                        
                         <div class="imagenes-popup">
                             <img src="img/popup-humificador.png" width="542px" height="476px" alt="popup de proyecto fotografico de humificador">
                         </div>
+                        
                         <div>
                             <a href="#popup-humificador" class="cerrar">X</a>
                         </div>
                     </div>
+                
                 </article>
 
                 <article class="lightbox" id="popup-buenosaires">
+                    
                     <div class="popup-contenido">
                         <div class="texto-popup">
                             <p class="categoria"> portfolio - fotografía</p>
                             <h2>Buenos Aires</h2>
                             <p>Realicé una sesión de fotos para un trabajo en el cual mediante fotografías había que lograr describir Buenos Aires con toda su esencia. El trabajo fue realizado todo en blanco y negro a pedido del cliente y logrando darle un estilo “antiguo”. </p>
                         </div>
+                        
                         <div class="imagenes-popup">
                             <img src="img/popup-buenosaires.png" width="451px" height="598px" alt="popup de proyecto fotografico de buenos aires">
                         </div>
+                        
                         <div>
                             <a href="#popup-humificador" class="cerrar">X</a>
                         </div>
                     </div>
+                
                 </article>
+            
             </section>
+
+            <section class="decoracion">
+                <div class="elemento-portfolio-izquierda"></div>
+                <div class="elemnto-portfolio-derecha"></div>
+            </section>
+        
         </main> 
     
         <footer>
