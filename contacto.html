@@ -70,8 +70,6 @@
                     <!-- parte izquierda del formulario -->
                     <div class="columna-izquierda-formulario">
                         
-                        <p class="campos">*Campos obligatorios</p>
-                        
                         <label for="nombre">Nombre:</label>
                         <input type="text" name="nombre" id="nombre" maxlength="50" placeholder="Ej.: Lucia" required>
 
@@ -82,9 +80,9 @@
                         <input type="email" name="email" id="email" placeholder="Ej.: lu.devoto@hotmail.com" required>
 
                         <p class="ayuda">En que puedo ayudarte?</p>
-                        <label>Identidad visual <input type="checkbox" name="intereses" value="identidad visual" id="identidad" required></label>
-                        <label>Creación de logo <input type="checkbox" name="intereses" value="creación de logo" id="logo" required></label>
-                        <label>Fotografía <input type="checkbox" name="intereses" value="fotografia" id="fotografia" required></label>
+                        <label><input type="checkbox" name="intereses" value="identidad visual" id="identidad" required>Identidad visual</label>
+                        <label><input type="checkbox" name="intereses" value="creación de logo" id="logo" required>Creación de logo</label>
+                        <label><input type="checkbox" name="intereses" value="fotografia" id="fotografia" required>Fotografía</label>
 
                     </div>
 
@@ -92,7 +90,9 @@
                     <div class="columna-derecha-formulario">
 
                         <label for="mensaje">Mensaje</label>
-                        <textarea name="mensaje" id="mensaje" maxlength="500" value="Hola Lucia, me quería comunicar con vos para empezar a trabajar en conjunto! Queria saber..." required></textarea>
+                        <textarea name="mensaje" id="mensaje" maxlength="500" placeholder="Hola Lucia, me quería comunicar con vos para empezar a trabajar en conjunto! Queria saber..." required></textarea>
+
+                        <p class="campos">*Campos obligatorios</p>
 
                         <input type="reset" value="Borrar" class="borrar">
                         <input type="submit" value="Enviar" class="enviar">
