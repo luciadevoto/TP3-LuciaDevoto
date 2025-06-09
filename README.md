@@ -2,9 +2,8 @@
 
 Este proyecto consiste en el desarrollo de un portfolio, utilizando HTML5 Y CSS.
 
-El trabajo fue desarrollado a partir de ocho archivos HTML5 para estructurar el contenido de manera ordenada según las distintas etiquetas. Cuatro de esos archivos HTML son los principales que se utilizan en el <nav> del <header> y los otros cuatro se utilizan a forma de “pop up”. Todavía no logro crear ese efecto de pop up con un fondo de baja opacidad.
-
-En el HTML “sobre mi” en la sección idiomas la parte de ingles que dice “first certificate in english” me queda centrado y no jusfiticado a la derecha como quiero, creo que es porque le aplique los estilos a la etiqueta <p> en general pero las etiquetas <p> de sobre mí no le agregue una clase. 
+El trabajo fue desarrollado a partir de ocho archivos HTML5 para estructurar el contenido de manera ordenada según las distintas etiquetas. Cuatro de esos archivos HTML son los principales que se utilizan en el del y los otros cuatro se utilizan a forma de “pop up”. Todavía no logro crear ese efecto de pop up con un fondo de baja opacidad.
+En el HTML “sobre mi” en la sección idiomas la parte de ingles que dice “first certificate in english” me queda centrado y no jusfiticado a la derecha como quiero, creo que es porque le aplique los estilos a la etiqueta en general pero las etiquetas de sobre mí no le agregue una clase.
 
 Aun me falta acomodar los HTML de los pop up y me falta agregar las imágenes decorativas de los distintos HTML
 
