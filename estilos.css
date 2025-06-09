@@ -8,9 +8,13 @@
 
 body {
   background-color: #5B6049;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-/*header*/
+
+/* ----------header---------- */
 
 .logo img {
   align-items: flex-start;
@@ -21,34 +25,26 @@ body {
   display: flex;
   flex-direction: row;
 }
+
 .botones ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   color:#E3E1A4;
   font-family: Fraunces;
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
-.botones a {
-  width: fit-content;
-  padding: 10px 20px;
-  text-decoration: none;
-  color:#E3E1A4;
-  background-color: #5B6049;
-  border-radius: 5px;
-}
 
 .botonera {
-  width: 1200px;
+  width: 80%;
   height: 60px;
   margin: 15px auto;
   padding: 0px 15px;
   align-items: center;
-  border-radius: 20px;
   border: 1px solid #E3E1A4;
   display: flex;
   flex-direction: row;
@@ -56,13 +52,19 @@ body {
   position: sticky;
   gap: 200px;
   z-index: 50;
+  border-radius: 13px;
 }
 
 .botones a {
   text-decoration: none;
   color: #E3E1A4; 
   font-weight: 500;
-  border-radius: 20px;
+  width: fit-content;
+  padding: 10px 20px;
+  text-decoration: none;
+  color:#E3E1A4;
+  background-color: #5B6049;
+  border-radius: 13px;
 }
 
 .botones a:hover {
@@ -70,13 +72,24 @@ body {
   color: #5B6049;
 }
 
-/*main*/
+
+/* ---------- main ---------- */
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+
+/* ---------- imagen de fondo decorativa ---------- */
+.titulo-inicio {
+  position: relative;
+  text-align: center;
+  padding: 200px 0px;
+  z-index: 1;
+}
+
 
 .titulo-inicio h1 {
   color: #E3E1A4;
@@ -88,7 +101,10 @@ main {
   line-height: normal;
   padding-left: 404px;
   padding-right: 404px;
+  position: relative;
+  z-index: 2;
 }
+
 
 .titulo-inicio h3 {
   color: #E3E1A4;
@@ -98,7 +114,28 @@ main {
   font-style: normal;
   font-weight: 200;
   line-height: normal;
+  position: relative;
+  z-index: 2;
 }
+
+
+.fondo-index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+.fondo-index img {
+  width: 100%;
+  height: 100%;
+  animation: mover-lateral 4s ease-in-out infinite;
+}
+
 
 .titulo h2 {
   color: #E3E1A4;
@@ -112,6 +149,7 @@ main {
   padding-right: 404px;
 }
 
+
 .titulo h3 {
   color: #E3E1A4;
   text-align: center;
@@ -121,6 +159,7 @@ main {
   font-weight: 200;
   line-height: normal;
 }
+
 
 .lightbox h2 {
   color:#E3E1A4;
@@ -134,74 +173,182 @@ main {
 }
 
 
-
-
-
-
-
-/*footer*/
-footer {
+.boton {
+  width: 90%;
+  height: 30%;
+  margin: 30px;
+  padding: 5px 15px;
+  align-items: center;
   display: flex;
-  width: 1200px;
-  height: 200px;
-  margin: 20px;
-  gap: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 60;
+}
+
+
+.boton a {
+  text-decoration: none;
+  color: #E3E1A4; 
   border: 1px solid #E3E1A4;
   border-radius: 20px;
-  height: 60px;
-  margin: 15px auto;
-  padding: 0px 15px;
+  font-weight: 500;
+  padding: 10%;
+}
+
+
+.boton a:hover {
+  background-color: #E3E1A4;
+  color: #5B6049;
+}
+
+/* ---------- sobre mi main ----------*/
+
+.presentacion {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+
+
+/*columna izquierda*/ 
+
+.columna-izquierda {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 20px;
+  text-align:left;
+  border-radius: 12px;
+}
+
+
+.columna-izquierda section {
+
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #E3E1A4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.columna-izquierda h2 {
+  font-family: Fraunces;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: normal;
+  border-bottom: 1px solid #E3E1A4;
+  border-bottom: 1px solid #E3E1A4;
+  color: #E3E1A4;
+  gap: 10px;
+  display:flex;
+  flex-direction:column;
   align-items: center;
-  z-index: 10;
 }
 
-footer p {
-  color:#E3E1A4;
-  font-family: Poppins;
-  font-size: 10px;
-  font-style: italic;
+.columna-izquierda h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  color: #E3E1A4; 
+}
+
+.columna-izquierda ul li {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  color: #E3E1A4;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.idiomas ul li {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/*columna derecha*/ 
+
+.columna-derecha { 
+  padding: 30px;
+  width: 40%;
+  margin: 30px;
+  text-align:left;
+  border:1px solid #E3E1A4;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+
+.columna-derecha h2 {
+  font-family: Fraunces;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: normal;
+  color: #E3E1A4;
+}
+
+
+.columna-derecha p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
   font-weight: 200;
-  line-height: normal;
+  font-style: normal;
+  color: #E3E1A4;
+  margin: 8px;
+  text-align: left;
 }
 
 
+.experiencia-laboral ul {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  color: #E3E1A4;
+  list-style: none;
+  margin: 8px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* portfolio */
+/* ---------- portfolio ---------- */
 .proyectos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px;
-    padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
 }
+
 
 .diseño {
   max-width: 40%;
   background-color:#E3E1A4;
-  padding: 16px;
+  padding: 20px;
   text-align: center;
   border-radius: 15px;
   transition: transform 0.3s;
 }
 
+
 .diseño a {
   text-decoration: none;
   border-radius: 10px;
-  color:#E3E1A4;
-  background-color: #5B6049;
+  color:#5B6049;
+  border: 1px solid #5B6049;
   text-align: center;
   font-family: Fraunces;
   font-size: 20px;
@@ -212,58 +359,76 @@ footer p {
   padding: 8px 15px;
 }
 
-.diseño:hover {
-  transform: scale(1.05);
+
+.diseño a:hover {
+  transform: scale(3);
+  background-color: #5B6049;
+  color: #E3E1A4;
 }
+
 
 .diseño img {
   width: 422px;
   height: 247px;
+  padding: 15px 5px;
 }
+
 
 .diseño h3 {
   color:#5B6049;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   line-height: normal;
 }
 
 
+/* ---------- formulario contacto ---------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*formulario*/
-
-Form {
-	width: 100%;
-	Height: auto;
+form {
+	width: 80%;
 	Border: 1px solid #5B6049;
-	Display: flex;
+	Display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin:30px;
+  gap: 20px;
 }
 
-Form div { 
+
+form div { 
+  flex: 1;
 	Width: 50%;
-	Height: auto;
+	Height: 200px;
 	Padding: 20px;
+  border: 1px solid #E3E1A4;
+  border-radius: 10px;
+  margin: 20px;
 }
+
 
 Label {
 	Display: block;
-	Height: 20px; 
+  margin-bottom: 5px;
+	Height: 30px; 
+  gap: 2px;
+  color: #E3E1A4;
+  text-align:left;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  max-width: 60%;
 }
+
+
+label[type=checkbox] {
+  align-items:left;
+}
+
 
 Input {
 	Width: 100%;
@@ -274,33 +439,45 @@ Input {
   Padding: 5px;
 }
 
+
 Input[type=checkbox] {
 	Width: auto;
 	Height: auto; 
+  margin-right: 10px;
 }
+
 
 Input[type=submit], input[type=reset] {
 	Height: 30px;
 	Width: 150px;
-	Color: #5B6049; 
-}
-
-.borrar {
-	Background-color: #5B6049; 
+  background-color: #E3E1A4;
+	Color: #5B6049;
   border-radius: 10px;
+  cursor: pointer;
 }
 
-.enviar {
-	Background-color: #5B6049;
+
+.borrar .enviar {
+  background-color: #E3E1A4;
+  color: #5B6049;
 	Margin: 0px 20px 0px 10px;
   border-radius: 10px;
 }
+
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+  background-color: #c8c68f;
+}
+
 
 Textarea {
 	Border: 1px solid #5B6049;
 	Width: 100%; 
 	Height: 200px;
+  border-radius: 10px; 
+  padding: 5px;
 }
+
 
 .contacto-personal ul {
   color: #E3E1A4;
@@ -310,22 +487,68 @@ Textarea {
   font-style: normal;
   font-weight: 200;
   line-height: normal;
-  padding: 100px;
+  padding: 100px 20px 30px 20px;
   list-style: none;
   display: flex;
   justify-content: space-between;
   gap: 100px;
 }
+
 
 .texto-preformulario {
   text-align: center;
-  padding: 100px;
+  padding: 30px 20px 100px 20px;
   list-style: none;
   display: flex;
-  justify-content: space-between;
-  gap: 100px;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
 }
 
+
+.campos {
+  color: #E3E1A4;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  max-width: 60%;
+}
+
+
+.formulario {
+  Border: 1px solid #5B6049;
+	Width: 80%; 
+	Height: 200px;
+  display: flex;
+}
+
+
+.columna-izquierda-formulario .columna-derecha-formulario {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E3E1A4;
+  max-width: 60%;
+}
+
+
+.ayuda p {
+  Height: 30px; 
+  padding: 30px;
+  color: #E3E1A4;
+  text-align:left;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  max-width: 60%;
+}
+
+
+/* ---------- etiqueta <p> general ---------- */
 p {
   color: #E3E1A4;
   text-align: center;
@@ -334,20 +557,37 @@ p {
   font-style: normal;
   font-weight: 200;
   line-height: normal;
-  max-width: 50%;
+  max-width: 60%;
 }
 
 
+/* ---------- footer ---------- */
+footer {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 60px;
+  gap: 10px;
+  border: 1px solid #E3E1A4;
+  border-radius: 15px;
+  margin: 15px auto;
+  padding: 0px 15px;
+  align-items: center;
+  z-index: 10;
+}
 
 
+footer p {
+  color:#E3E1A4;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 200;
+  line-height: normal;
+}
 
 
-
-
-
-
-
-/* responsive */
+/* ---------- responsive ---------- */
 @media (max-width: 768px) {
     
     .botones ul {
@@ -367,4 +607,15 @@ p {
     .diseño {
         max-width: 100%;
     }
+}
+
+
+/* ---------- animación ---------- */
+@keyframes mover-lateral {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
 }
