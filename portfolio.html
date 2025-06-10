@@ -67,60 +67,34 @@
                 <article class="diseño">
                     <h3>La imprenta</h3>
                     <img src="img/la-imprenta.png" width="482px" height="307px" alt="miniatura del proyecto la imprenta">
-                    <button class="boton-popup" onclick="abrirPopup('popup-laimprenta.html')">Identidad visual</button>
+                    <a href="popup-laimprenta.html" class="boton-popup">Identidad visual</a>
                 </article>
             
                 <article class="diseño">
                     <h3>Mali skincare</h3>
                     <img src="img/mali.png" width="482px" height="307px" alt="miniatura del proyecto mali skincare">
-                    <button class="boton-popup" onclick="abrirPopup('popup-maliskincare.html')">Identidad visual</button>
+                    <a href="popup-maliskincare.html" class="boton-popup">Identidad visual</a>
                 </article>
 
                 <article class="diseño">
                     <h3>Humificador</h3>
                     <img src="img/humificador.png" width="482px" height="307px" alt="miniatura del proyecto humificador">
-                    <button class="boton-popup" onclick="abrirPopup('popup-humificador.html')">Fotografía</button>
+                    <a href="popup-humificador.html" class="boton-popup">Identidad visual</a>
                 </article>
 
                 <article class="diseño">
                     <h3>Buenos Aires</h3>
                     <img src="img/buenos-aires.png" width="482px" height="307px" alt="miniatura del proyecto buenos aires">
-                    <button class="boton-popup" onclick="abrirPopup('popup-buenosaires.html')">Fotografía</button>
+                    <a href="popup-buenosaires.html" class="boton-popup">Identidad visual</a>
                 </article>
             
             </section>
-
-            <div id="popup-container" class="popup-overlay"></div>
         
         </main> 
     
         <footer>
             <p>Todos los derechos reservados - Lucia Devoto - Computación III - Cátedra Wischñevsky.</p>
         </footer>
-
-        <!-- script para los popups -->
-        <script>
-            function abrirPopup(url) {
-                fetch(url)
-                    .then(res => res.text())
-                    .then(html => {
-                        document.getElementById('popup-container').innerHTML = html;
-                        document.getElementById('popup-container').style.display = 'flex';
-                        document.body.classList.add('fondo-blur');
-
-                        const cerrar = document.querySelector('.cerrar');
-                        if (cerrar) {
-                            cerrar.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                document.getElementById('popup-container').style.display = 'none';
-                                document.getElementById('popup-container').innerHTML = '';
-                                document.body.classList.remove('fondo-blur');
-                            });
-                        }
-                    });
-            }
-
-        </script>
 
     </body>
 
