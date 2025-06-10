@@ -393,12 +393,16 @@ main {
 
 
 /* -------------------- portfolio -------------------- */
-.proyectos {
-  display: flex;
-  flex-wrap: wrap;
+/*.proyectos {
   justify-content: center;
   gap: 40px;
   padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, auto); 
+  column-gap: 20px;                       
+  row-gap: 30px;                          
+  justify-content: center;               
+  padding: 40px 0;
 }
 
 
@@ -450,12 +454,13 @@ main {
   font-style: normal;
   font-weight: 200;
   line-height: normal;
-}
+}*/
 
 
 /* -------------------- pop up portfolio -------------------- */
 
-.popup {
+
+/*.popup {
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -519,7 +524,7 @@ main {
   color: #5B6049;
   background-color: #E3E1A4;
   transform: scale(1.2);
-}
+}*/
 
 
 /* -------------------- formulario -------------------- */
@@ -737,5 +742,123 @@ footer p {
   }
 }
 
+
+
+
+
+
+
+
+
+.sector-portfolio { 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* Miniaturas clickeables */
+.galeria-proyectos {
+  display: grid;
+  grid-template-columns: repeat(2, auto); 
+  column-gap: 20px;                       
+  row-gap: 30px;                          
+  justify-content: center;               
+  padding: 40px 0;                        
+}
+
+.galeria-proyectos a img {
+  width: 250px;                           
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.galeria-proyectos a img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Galería oculta grande */
+.galeria-oculta {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.galeria-oculta ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-contenido {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+}
+
+.popup-contenido:target {
+  display: flex;
+}
+
+.popup-contenido img {
+  max-width: 70%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.popup-contenido p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 200;
+  font-style: normal;
+  max-width: 600px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.popup-contenido h2 {
+  font-family: Fraunces;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+  color: #E3E1A4;
+  margin: 20px 0px 0px;
+}
+
+.popup-contenido button {
+  margin: 10px 80px 10px;
+  padding: 10px 20px;
+  color: #5B6049;
+  background-color: #E3E1A4;
+  border:1px solid #E3E1A4;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  
+}
+
+.popup-contenido button:hover {
+  color: #5B6049;
+  background-color: #E3E1A4;
+  transform: scale(1.02);
+}
 
 
