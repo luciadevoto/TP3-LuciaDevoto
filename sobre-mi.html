@@ -28,10 +28,15 @@
                           
             <nav class="botonera">
                 <div class="logo">
-                    <img src="img/logo.svg" width="126px" height="65px" alt="logo">
+                    <a href="index.html"> 
+                        <img src="img/logo.svg" width= "126px" height="65px" alt="logo">
+                    </a>
                 </div>
+
+                <!-- menú hamburguesa -->
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
                 
-                <div class="botones">
+                <div class="botones" id="menu">
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="sobre-mi.html">Sobre mi</a></li>
@@ -50,7 +55,6 @@
                 <h3>para que me conozcas un poco</h3>
             </section>
 
-            <!-- decoracion de la pagina, no se si es correcto ponerlo asi -->
             <section class="decoracion-sobremi">
                 <div class="decoracion-sobremi-derecha">
                     <img src="img/elemento-sobremi-derecha.svg" width="100%" height="200px" alt="imagen decorativa">
@@ -133,7 +137,6 @@
 
             </section>
 
-            <!-- decoracion de la pagina, no se si es correcto ponerlo asi -->
             <section class="decoracion-sobremi">
                 <div class="decoracion-sobremi-izquierda">
                     <img src="img/elemento-sobremi-izquierda.svg" width="100%" height="200px" alt="imagen decorativa">
@@ -145,5 +148,14 @@
         <footer>
             <p>Todos los derechos reservados - Lucia Devoto - Computación III - Cátedra Wischñevsky.</p>
         </footer>
+
+        <!-- menú hamburguesa -->
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('menu');
+                menu.classList.toggle('activo');
+            }
+        </script>
+
     </body>
 </html>

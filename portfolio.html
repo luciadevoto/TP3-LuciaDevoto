@@ -27,10 +27,15 @@
                           
             <nav class="botonera">
                 <div class="logo">
-                    <img src="img/logo.svg" width="126px" height="65px" alt="logo">
+                    <a href="index.html"> 
+                        <img src="img/logo.svg" width= "126px" height="65px" alt="logo">
+                    </a>
                 </div>
+
+                <!-- menú hamburguesa -->
+                <button class="menu-toggle" onclick="toggleMenu()">☰</button>
                 
-                <div class="botones">
+                <div class="botones" id="menu">
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="sobre-mi.html">Sobre mi</a></li>
@@ -63,52 +68,61 @@
 
             <!-- inicio de galeria para pop up-->
             <section class="galeria-proyectos">
-                
-                <a href="#laimprenta" onclick="mostrarGaleria()">
-                    <img src="img/la-imprenta.png" alt="proyecto de identidad la imprenta">
-                </a>
 
-                <a href="#maliskincare" onclick="mostrarGaleria()">
-                    <img src="img/mali.png" alt="proyecto de identidad mali skincare">
-                </a>
+                <div class="tarjeta-proyecto">
+                    <h3>La imprenta</h3>
+                    <img src="img/la-imprenta.png" alt="proyecto la imprenta">
+                    <button onclick="mostrarGaleria('laimprenta')" class="boton-popup">identidad visual</button>
+                </div>
 
-                <a href="#humificador" onclick="mostrarGaleria()">
+                <div class="tarjeta-proyecto">
+                    <h3>Mali skincare</h3>
+                    <img src="img/mali.png" alt="proyecto mali skincare">
+                    <button onclick="mostrarGaleria('maliskincare')" class="boton-popup">identidad visual</button>
+                </div>
+
+                <div class="tarjeta-proyecto">
+                    <h3>Humificador</h3>
                     <img src="img/humificador.png" alt="proyecto fotografico de humificador">
-                </a>
+                    <button onclick="mostrarGaleria('humificador')" class="boton-popup">fotografia</button>
+                </div>
 
-                <a href="#buenosaires" onclick="mostrarGaleria()">
-                    <img src="img/buenos-aires.png" alt="proyecto fotografico de buenos aires"> 
-                </a>
+                <div class="tarjeta-proyecto">
+                    <h3>Buenos Aires</h3>
+                    <img src="img/buenos-aires.png" alt="proyecto fotografico de buenos aires">
+                    <button onclick="mostrarGaleria('buenosaires')" class="boton-popup">fotografia</button>
+                </div>
+
             </section>
 
             <!-- inicio de galeria oculta -->
              <section id="galeria" class="galeria-oculta">
                 
                 <ul>
-
+                     
                     <li class="popup-contenido" id="laimprenta">
-                        <button onclick="ocultarGaleria()">volver</button>
+                        <button onclick="ocultarGaleria()">cerrar</button>
                         <img src="img/popup-laimprenta.png" width="420px" height="380px" alt="proyecto la imprenta">
                         <h2>La imprenta</h2>
-                        <p class="descripcion">La imprenta es el resultado de una búsqueda profunda por una identidad visual sobre una obra de teatro que se realiza en el Teatro Cervantes. Busqué una identidad relacionada con la obra, eligiendo estilos de presentaciones mas “rusticas”.</p>
+                        <p class="descripcion">La imprenta es el resultado de una búsqueda profunda por una identidad visual sobre una obra de teatro que se realiza en el Teatro Cervantes. Busqué una identidad relacionada con la obra, eligiendo estilos de presentaciones mas “rusticas”. </p>
                     </li>
 
                     <li class="popup-contenido" id="maliskincare">
-                        <button onclick="ocultarGaleria()">volver</button>
+                        <button onclick="ocultarGaleria()">cerrar</button>
                         <img src="img/popup-maliskincare.png" width="420px" height="380px" alt="proyecto maliskincare">
                         <h2>Mali skincare</h2>
                         <p class="descripcion">MALI Skincare es el resultado de una búsqueda profunda por una identidad visual que conecte con el cuidado y la armonía interior. Aposté por una estética limpia y moderna, con una paleta suave y formas geométricas que evocan equilibrio. </p>
                     </li>
 
                     <li class="popup-contenido" id="humificador">
-                        <button onclick="ocultarGaleria()">volver</button>
+                        <button onclick="ocultarGaleria()">cerrar</button>
                         <img src="img/popup-humificador.png" width="420px" height="380px" alt="proyecto humificador">
                         <h2>Humificador</h2>
                         <p class="descripcion">Realicé una sesión de fotos para la venta del humificador. La sesión incluye una foto del producto para mostrar el mismo, una foto del producto como decoración y una foto del producto en uso. Esto puede variar dependiendo el producto y la sesión de fotos que se desee realizar.</p>
                     </li>
 
                     <li class="popup-contenido" id="buenosaires">
-                        <button onclick="ocultarGaleria()">volver</button>
+                        <button onclick="ocultarGaleria()">cerrar</button>
                         <img src="img/popup-buenosaires.png" width="420px" height="380px" alt="proyecto buenos aires">
                         <h2>Buenos Aires</h2>
                         <p class="descripcion">Realicé una sesión de fotos para un trabajo en el cual mediante fotografías había que lograr describir Buenos Aires con toda su esencia. El trabajo fue realizado todo en blanco y negro a pedido del cliente y logrando darle un estilo “antiguo”. </p>
@@ -124,17 +138,43 @@
             <p>Todos los derechos reservados - Lucia Devoto - Computación III - Cátedra Wischñevsky.</p>
         </footer>
 
+        <!-- pop up -->
         <script>
-            
-            function mostrarGaleria() {
-                document.getElementById("galeria").style.display = "flex";
+            function mostrarGaleria(id) {
+            const galeria = document.getElementById("galeria");
+            galeria.style.display = "flex";
+
+    
+            document.querySelectorAll(".popup-contenido").forEach(p => {
+            p.style.display = "none";
+            });
+
+    
+            const popup = document.getElementById(id);
+            if (popup) {
+            popup.style.display = "flex";
             }
+        }
 
             function ocultarGaleria() {
-            document.getElementById("galeria").style.display = "none";
-            window.location.hash = "";
-            }
+                document.getElementById("galeria").style.display = "none";
 
+    
+                document.querySelectorAll(".popup-contenido").forEach(p => {
+                p.style.display = "none";
+                });
+
+    
+                window.location.hash = "";
+        }
+        </script>
+
+        <!-- menú hamburguesa -->
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('menu');
+                menu.classList.toggle('activo');
+            }
         </script>
 
     </body>

@@ -1,5 +1,6 @@
 @charset "utf-8";
 /*CSS Document*/
+
 *{
   margin: 0px;
   padding: 0px;
@@ -8,8 +9,6 @@
 
 body {
   background-color: #5B6049;
-  display: flex;
-  flex-direction: column;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -43,7 +42,7 @@ header {
   justify-content: space-between;
   color:#E3E1A4;
   font-family: Fraunces;
-  font-size: 15px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -51,7 +50,8 @@ header {
 
 .botonera {
   width: 80%;
-  height: 60px;
+  min-height: 60px; 
+  height: auto;
   margin: 15px auto;
   padding: 0px 15px;
   align-items: center;
@@ -60,7 +60,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   position: sticky;
-  gap: 200px;
+  gap: 5%;
   z-index: 50;
   border-radius: 13px;
   backdrop-filter: blur(5px);
@@ -212,7 +212,8 @@ main {
 
 
 
-/* -------------------- animación fondo index----------------------- */
+/* -------------------- animación de fondo index -------------------- */
+
 @keyframes mover-lateral {
   0%, 100% {
     transform: translateX(0);
@@ -224,7 +225,7 @@ main {
 
 
 
-/* -------------------- sobre mi - main --------------------*/
+/* -------------------- sobre mi - main -------------------- */
 
 .presentacion {
   display: flex;
@@ -269,7 +270,7 @@ main {
   position: absolute;
   top: 80px;       
   left: 0;
-  width: 150px;
+  width: 220px;
   z-index: 0;
 }
 
@@ -277,7 +278,7 @@ main {
   position: absolute;
   top: 80px;       
   right: 0;
-  width: 150px;
+  width: 220px;
   z-index: 0;
 }
 
@@ -306,12 +307,21 @@ main {
   gap: 20px;
 }
 
+.columna-izquierda p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  font-style: normal;
+  color: #E3E1A4;
+  margin: 8px;
+  text-align: left;
+}
+
 .columna-izquierda h2 {
   font-family: Fraunces;
   font-size: 25px;
   font-weight: 600;
   font-style: normal;
-  border-bottom: 1px solid #E3E1A4;
   border-bottom: 1px solid #E3E1A4;
   color: #E3E1A4;
   gap: 10px;
@@ -347,7 +357,7 @@ main {
 
 
 
-/* -------------------- columna derecha - sobre mi --------------------- */ 
+/* -------------------- columna derecha - sobre mi -------------------- */ 
 
 .columna-derecha { 
   padding: 30px;
@@ -391,44 +401,61 @@ main {
 
 
 
-/* -------------------- portfolio -------------------- */
-
-.sector-portfolio { 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-
-
-/* -------------------- galeria visible ---------------------- */
+/* -------------------- portfolio - galeria visible -------------------- */
 
 .galeria-proyectos {
   display: grid;
-  grid-template-columns: repeat(2, auto); 
-  column-gap: 50px;                       
-  row-gap: 50px;                          
-  justify-content: center;               
-  padding: 40px 0;                      
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  justify-items: center;
+  padding: 40px 0;
 }
 
-.galeria-proyectos a img {
-  width: 350px;                           
+.tarjeta-proyecto {
+  background-color: #E3E1A4;
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.tarjeta-proyecto h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #5B6049;
+  margin-bottom: 10px;
+}
+
+.tarjeta-proyecto img {
+  width: 100%;
   height: auto;
   border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  margin-bottom: 15px;
 }
 
-.galeria-proyectos a img:hover {
-  transform: scale(1.05);
+.boton-popup {
+  font-family: Fraunces;
+  font-size: 16px;
+  background-color: #E3E1A4;
+  color: #5B6049;
+  border: 1px solid #5B6049;
+  padding: 8px 16px;
+  border-radius: 12px;
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.boton-popup:hover {
+  background-color: #5B6049;
+  color: #E3E1A4;
+  transform: scale(1.05);
 }
 
 
 
-/* --------------------Galería oculta --------------------- */
+/* -------------------- portfolio - galeria oculta -------------------- */ 
 
 .galeria-oculta {
   display: none;
@@ -459,10 +486,6 @@ main {
   align-items: center;
   margin: 20px;
   text-align: center;
-}
-
-.popup-contenido:target {
-  display: flex;
 }
 
 .popup-contenido img {
@@ -503,18 +526,18 @@ main {
 }
 
 .popup-contenido button:hover {
-  color: #5B6049;
-  background-color: #E3E1A4;
-  transform: scale(1.02);
-}
+  background-color: #5B6049;
+  border: #5B6049;
+  color: #E3E1A4;
+  transform: scale(1.01);
+} 
 
 
 
 /* -------------------- formulario -------------------- */
-
 form {
 	width: 100%;
-	Display: flex; 
+	display: flex; 
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
@@ -522,17 +545,17 @@ form {
 
 form div { 
   flex: 1;
-	Width: 50%;
-	Height: 500px;
-	Padding: 20px;
+	width: 50%;
+	height: 500px;
+	padding: 20px;
   border-radius: 10px;
   margin: 20px;
 }
 
 label {
-	Display: block;
+	display: block;
   margin-bottom: 5px;
-	Height: 30px; 
+	height: 30px; 
   gap: 2px;
   color: #E3E1A4;
   text-align:left;
@@ -549,25 +572,25 @@ label[type=checkbox] {
 }
 
 input {
-	Width: 100%;
-	Height: 30px;
+	width: 100%;
+	height: 30px;
   border-radius: 10px;
   border: 1px solid #E3E1A4;
   background-color: #E3E1A4;
-  Margin-bottom: 20px;
+  margin-bottom: 20px;
   Padding: 5px;
 }
 
 input[type=checkbox] {
-	Width: auto;
-	Height: auto; 
+	width: auto;
+	height: auto; 
   margin: 15px 10px;
   cursor: pointer;
 }
 
 input[type=submit], input[type=reset] {
-	Height: 30px;
-	Width: 150px;
+	height: 30px;
+	width: 150px;
   background-color: #E3E1A4;
 	Color: #5B6049;
   border-radius: 10px;
@@ -665,7 +688,6 @@ textarea {
 
 
 /* -------------------- etiqueta <p> general -------------------- */
-
 p {
   color: #E3E1A4;
   font-family: "Poppins", sans-serif;
@@ -692,8 +714,6 @@ footer {
   align-items: center;
 }
 
-
-
 footer p {
   color:#e9e7b7;
   font-family: "Poppins", sans-serif;
@@ -701,16 +721,153 @@ footer p {
   font-style: italic;
   font-weight: 200;
   line-height: normal;
+} 
+
+
+/* -------------------- menú hamburguesa y responsive -------------------- */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #E3E1A4;
+  cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
 
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #E3E1A4;
+    cursor: pointer;
+    margin-left: auto;
+  }
 
+  .botonera {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px auto;
+    height: auto;
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #E3E1A4;
+    border-radius: 13px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+  }
 
+  .logo img {
+    height: 35px;
+  }
 
+  .botones {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    background-color: #5B6049;
+    width: 100%;
+    border-top: 1px solid #E3E1A4;
+    z-index: 100;
+  }
 
+  .botones ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+    list-style: none;
+    align-items: center;
+  }
 
+  .botones.activo {
+    display: flex;
+  }
 
+  .botones a {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+  }
 
+  .titulo h2,
+  .titulo h3,
+  .titulo-inicio h1,
+  .titulo-inicio h3 {
+    padding: 20px;
+    text-align: center;
+  }
 
+  .titulo-inicio h1 {
+    font-size: 2.5rem;
+  }
+  .titulo-inicio h3 {
+    font-size: 1.2rem;
+  }
 
+  .galeria-proyectos {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 10px;
+  }
 
+  .tarjeta-proyecto {
+    width: 90%;
+  }
+
+  .presentacion {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .columna-izquierda,
+  .columna-derecha {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .columna-izquierda section {
+    padding: 15px;
+  }
+
+  .contacto-personal ul {
+    padding: 30px 10px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .formulario {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  form div {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .ayuda p,
+  .campos {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+}
