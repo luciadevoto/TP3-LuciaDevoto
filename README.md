@@ -48,15 +48,15 @@ Las fuentes fueron descargadas desde **Google Fonts**:
 - *Menú hamburguesa*: navegación adaptada a pantallas pequeñas.
 - *Formulario funcional*: con campos obligatorios, opción de intereses y envío mediante mailto.
 
-##Dificultades y aprendizajes 
+## Dificultades y aprendizajes 
 
 Tuve algunas dificultades al principio arrancar con **CSS** al tener que trabajar con una cantidad de archivos **HTML**. Me costó mucho lograr lo que quería en la parte del responsive, pero finalmente quedó como quería. Aunque me tomó mucho tiempo porque es un trabajo complejo para mi que recien estoy arrancando con código, disfrute muchisimo realizar este trabajo!
 
-**Editor de código utilizado**
+## Editor de código utilizado
 
 - Trabajé con el editor de código *Visual Studio Code*.
 
-**Tamaño de pantalla utilizado**
+## Tamaño de pantalla utilizado
 
 - Trabajé en una pantalla de 1366px x 768px.
 - Mobile realizado en una medida de 600px.
