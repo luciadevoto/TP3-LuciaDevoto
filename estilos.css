@@ -99,7 +99,7 @@ main {
 
 
 
-/* -------------------- imagenes decorativas de index -------------------- */
+/* -------------------- index -------------------- */
 
 .titulo-inicio {
   position: relative;
@@ -132,35 +132,6 @@ main {
   line-height: normal;
   position: relative;
   z-index: 2;
-}
-
-.fondo-index {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.fondo-index img {
-  width: 100%;
-  height: 100%;
-  animation: mover-lateral 4s ease-in-out infinite;
-}
-
-.decoracion-index-izquierda {
-  position: absolute;
-  bottom:2%;
-  left: 38.5%;
-  overflow: hidden;
-}
-
-.decoracion-index-derecha {
-  position: absolute;
-  bottom: 2%;
-  left: 57%;
-  overflow: hidden;
 }
 
 .titulo h2 {
@@ -238,6 +209,35 @@ main {
 
 /* -------------------- elementos decorativos -------------------- */ 
 
+.fondo-index {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.fondo-index img {
+  width: 100%;
+  height: 100%;
+  animation: mover-lateral 4s ease-in-out infinite;
+}
+
+.decoracion-index-izquierda {
+  position: absolute;
+  bottom:2%;
+  left: 38.5%;
+  overflow: hidden;
+}
+
+.decoracion-index-derecha {
+  position: absolute;
+  bottom: 2%;
+  left: 57%;
+  overflow: hidden;
+}
+
 .decoracion-sobremi img {
   position: absolute;
   z-index: 2;
@@ -279,6 +279,28 @@ main {
   top: 80px;       
   right: 0;
   width: 220px;
+  z-index: 0;
+}
+
+.decoracion-contacto img {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.elemento-contacto-izquierda img {
+  position: absolute;
+  top: 80px;       
+  left: 0;
+  width: 150px;
+  z-index: 0;
+}
+
+.elemento-contacto-derecha img {
+  position: absolute;
+  top: 80px;       
+  right: 0;
+  width: 150px;
   z-index: 0;
 }
 
@@ -536,11 +558,11 @@ main {
 
 /* -------------------- formulario -------------------- */
 form {
-	width: 100%;
+	width: 90%;
 	display: flex; 
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  flex-direction: column;
 }
 
 form div { 
@@ -658,7 +680,7 @@ textarea {
 
 .formulario {
   Border: 1px solid #e3e1a4;
-	Width: 60%; 
+	Width: 70%; 
 	Height: 500px;
   display: flex;
   border-radius: 20px;
@@ -722,6 +744,7 @@ footer p {
   font-weight: 200;
   line-height: normal;
 } 
+
 
 
 /* -------------------- menú hamburguesa y responsive -------------------- */
