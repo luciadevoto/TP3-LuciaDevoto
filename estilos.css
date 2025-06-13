@@ -95,7 +95,7 @@ main {
   flex: 1;
   padding-top: 110px;
   position: relative;
-}
+} 
 
 
 
@@ -179,7 +179,7 @@ main {
 .boton a:hover {
   background-color: #E3E1A4;
   color: #5B6049;
-}
+} 
 
 
 
@@ -192,7 +192,7 @@ main {
   50% {
     transform: translateX(20px);
   }
-}
+} 
 
 
 
@@ -203,7 +203,7 @@ main {
   flex-direction: row;
   padding-top: 30px;
   justify-content: center;
-}
+} 
 
 
 
@@ -302,7 +302,7 @@ main {
   right: 0;
   width: 150px;
   z-index: 0;
-}
+} 
 
 
 
@@ -473,7 +473,7 @@ main {
   background-color: #5B6049;
   color: #E3E1A4;
   transform: scale(1.05);
-}
+} 
 
 
 
@@ -705,7 +705,7 @@ textarea {
   line-height: normal;
   max-width: 60%;
   margin-top: 20px;
-}
+} 
 
 
 
@@ -717,7 +717,7 @@ p {
   font-style: normal;
   font-weight: 200;
   line-height: normal;
-}
+} 
 
 
 
@@ -894,3 +894,4 @@ footer p {
     text-align: center;
   }
 }
+
