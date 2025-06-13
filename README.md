@@ -61,6 +61,6 @@ Tuve algunas dificultades al principio arrancar con **CSS** al tener que trabaja
 - Trabajé en una pantalla de 1366px x 768px.
 - Mobile realizado en una medida de 600px.
 
-**Adjunto link a Figma**
+## Adjunto link a Figma
 
 https://www.figma.com/design/eVDwe38Ok8e8TKl7AYrgEZ/TP3---Portfolio?m=auto&t=XC0ry3jvBGPdNSCt-6
