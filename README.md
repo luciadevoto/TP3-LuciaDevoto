@@ -49,6 +49,7 @@ Las fuentes fueron descargadas desde **Google Fonts**:
 - *Formulario funcional*: con campos obligatorios, opción de intereses y envío mediante mailto.
 
 ##Dificultades y aprendizajes 
+
 Tuve algunas dificultades al principio arrancar con **CSS** al tener que trabajar con una cantidad de archivos **HTML**. Me costó mucho lograr lo que quería en la parte del responsive, pero finalmente quedó como quería. Aunque me tomó mucho tiempo porque es un trabajo complejo para mi que recien estoy arrancando con código, disfrute muchisimo realizar este trabajo!
 
 **Editor de código utilizado**
